@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import type { Message } from "../../../types/type";
 import { useAppSelector } from "../../../store/hook";
 import MessageSkeleton from "../components/MessageSkeleton";
