@@ -1,5 +1,4 @@
-// components/PostsTab.tsx
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import type { getPost } from "../../../types/type";
 import NoPost from "../components/NoPost";
@@ -9,7 +8,6 @@ import { Play } from "lucide-react";
 const PostDetail = lazy(() => import("./PostDetail"));
 
 const PostPage = () => {
-  const dispatch = useAppDispatch();
   const [selectedPost, setSelectedPost] = useState<any>(null);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
