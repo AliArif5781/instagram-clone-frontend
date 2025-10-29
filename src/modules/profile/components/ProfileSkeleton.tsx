@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProfileSkeleton = () => {
   // i use in homePage right most section load when userProfile didnot laod.
   return (
