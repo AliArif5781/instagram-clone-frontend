@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppSelector } from "../../../store/hook";
 import ProfileSkeleton from "../components/ProfileSkeleton";
 import SuggestedUser from "./SuggestedUser";
