@@ -1,10 +1,8 @@
 import img from "/instagram-login-page.webp";
-import type { FormSchema } from "../../../components/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { loginUserThunk } from "../../../store/slice/user.thunk";
 import Form from "../../../components/Form";
-import Separator from "../components/Separator";
 import { LoginSchema } from "../schema/schema";
 import { clearButtonLoading } from "../../../store/slice/user.slice";
 import { useEffect } from "react";
@@ -13,7 +11,7 @@ import Loader from "../../../components/Loader";
 const Login = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { buttonLoading, isAuthenticated, screenLoading } = useAppSelector(
+  const { buttonLoading, isAuthenticated } = useAppSelector(
     (state) => state.user
   );
 
