@@ -11,8 +11,6 @@ import {
 import { getUserByIdThunk } from "../../../store/slice/user.thunk";
 import Loader from "../../../components/Loader";
 import { getUserPostsThunk } from "../../../store/postSlice/post.thunk";
-import SearchUserPost from "./SearchUserPost";
-import { Save } from "lucide-react";
 
 const SearchUserProfile = () => {
   const { userId } = useParams();
@@ -23,8 +21,7 @@ const SearchUserProfile = () => {
   const { followers, following, isFollowing, loading } = useAppSelector(
     (state) => state.follow
   );
-  const { searchUserPosts, searchUserPostsCount, screenLoading } =
-    useAppSelector((state) => state.post);
+  const { searchUserPostsCount } = useAppSelector((state) => state.post);
 
   // const { searchUserPosts, searchUserPostsCount, screenLoading } =
   //   useAppSelector((state) => state.post);
