@@ -6,13 +6,11 @@ import SavedPage from "../pages/SavePage";
 import CreatePost from "../pages/CreatePost";
 import EditProfile from "../pages/EditProfile";
 import SearchComponent from "../pages/SearchComponent";
-import TestSearchComponent from "../pages/TestSearchComponent";
 import SearchUserProfile from "../pages/SearchUserProfile";
 import SearchUserPost from "../pages/SearchUserPost";
 import HomePage from "../pages/HomePage";
 import CreateStory from "../pages/CreateStory";
 import Reels from "../pages/Reels";
-// import HomePage from "../pages/HomePage";
 
 export const profileRoute: RouteObject[] = [
   {
