@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../../api/axios";
 import toast from "react-hot-toast";
-import type { createpost, UpdateProfileData } from "../../types/type";
+import type { createpost } from "../../types/type";
 import { AxiosError } from "axios";
 
 export const createPostThunk = createAsyncThunk(
