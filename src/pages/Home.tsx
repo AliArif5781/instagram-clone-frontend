@@ -20,7 +20,7 @@ const Home = () => {
   const { isAuthenticated, userProfile } = useAppSelector(
     (state) => state.user
   );
-  const { onlineUsers } = useAppSelector((state) => state.socket);
+  // const { onlineUsers } = useAppSelector((state) => state.socket);
 
   // console.log(onlineUsers, "Online Users");
 
