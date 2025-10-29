@@ -8,7 +8,6 @@ import {
   getFollowStatusThunk,
 } from "../../../store/follow/follow.thunk";
 import { Link, useParams } from "react-router-dom";
-import Loader from "../../../components/Loader";
 
 // Lazy load the modal components
 const FollowersModal = lazy(() => import("./FollowerModel"));
