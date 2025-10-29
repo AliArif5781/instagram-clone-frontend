@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../../store/hook";
+import { useAppSelector } from "../../../store/hook";
 import type { getPost } from "../../../types/type";
 import NoPost from "../components/NoPost";
 import Loader from "../../../components/Loader";

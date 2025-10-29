@@ -51,10 +51,12 @@ const SearchUserProfile = () => {
       // Fetch follow status - THIS IS THE KEY
       dispatch(getFollowStatusThunk(userId))
         .unwrap()
-        .then((response) => {
+        .then(() => {
+          // response
           setLocalLoading(false);
         })
-        .catch((error) => {
+        .catch(() => {
+          // error
           setLocalLoading(false);
         });
 
@@ -70,7 +72,8 @@ const SearchUserProfile = () => {
     if (userId && !isFollowing) {
       dispatch(followUserThunk(userId))
         .unwrap()
-        .then((result) => {
+        .then(() => {
+          // result
           // Refresh follow status after successful follow
           dispatch(getFollowStatusThunk(userId));
         })
@@ -84,7 +87,8 @@ const SearchUserProfile = () => {
     if (userId && isFollowing) {
       dispatch(unfollowUserThunk(userId))
         .unwrap()
-        .then((result) => {
+        .then(() => {
+          // result
           // Refresh follow status
           dispatch(getFollowStatusThunk(userId));
         })

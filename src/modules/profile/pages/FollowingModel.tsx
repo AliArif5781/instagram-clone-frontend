@@ -12,7 +12,7 @@ interface FollowingModalProps {
 const FollowingModal = ({ isOpen, onClose, userId }: FollowingModalProps) => {
   const dispatch = useAppDispatch();
   const { following, loading } = useAppSelector((state) => state.follow);
-  const currentUser = useAppSelector((state) => state.user.userProfile);
+  // const currentUser = useAppSelector((state) => state.user.userProfile);
   // const isOwnProfile = currentUser?._id === userId;
 
   useEffect(() => {

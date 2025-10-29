@@ -71,6 +71,7 @@ const SearchComponent = () => {
     if (searchTerm.trim().length > 0 && searchResults.length > 0) {
       setShowResults(true);
     }
+    console.log(handleInputFocus);
   };
 
   return (
