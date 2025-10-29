@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "../../../store/hook";
 import NoPost from "../components/NoPost";
 import type { getPost } from "../../../types/type";
-import PostDetail from "./PostDetail";
 import Loader from "../../../components/Loader";
 import SearchUserPostDetails from "./SearchUserPostDetails";
 
@@ -10,8 +9,9 @@ const SearchUserPost = () => {
   const [selectedPost, setSelectedPost] = useState<any>(null);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
-  const { searchUserPosts, searchUserPostsCount, screenLoading } =
-    useAppSelector((state) => state.post);
+  const { searchUserPosts, screenLoading } = useAppSelector(
+    (state) => state.post
+  );
 
   // Show loading state
   if (screenLoading) {
