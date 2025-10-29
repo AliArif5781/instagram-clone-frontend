@@ -1,4 +1,3 @@
-import React from "react";
 import type { otherUsers } from "../../../types/type";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { setSelectedUser } from "../../../store/slice/user.slice";
