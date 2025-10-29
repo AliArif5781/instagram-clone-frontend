@@ -1,6 +1,4 @@
-import React from "react";
 import MessageSidebar from "./MessageSidebar";
-import OtherUsers from "./OtherUsers";
 import MessageChat from "./MessageChat";
 
 const MessageContainer = () => {
