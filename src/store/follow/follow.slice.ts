@@ -76,7 +76,7 @@ export const followSlice = createSlice({
       state.loading = true;
       state.error = null;
     });
-    builder.addCase(followUserThunk.fulfilled, (state, action) => {
+    builder.addCase(followUserThunk.fulfilled, (state) => {
       state.loading = false;
       state.isFollowing = true; // You are now following this user
       state.followingCount += 1; // YOUR following count increases
@@ -186,7 +186,7 @@ export const followSlice = createSlice({
     });
 
     // suggested for you
-    builder.addCase(suggestedForYouThunk.pending, (state, action) => {
+    builder.addCase(suggestedForYouThunk.pending, (state) => {
       state.setLoading.suggestedUsers = true;
       state.error = "";
     });
