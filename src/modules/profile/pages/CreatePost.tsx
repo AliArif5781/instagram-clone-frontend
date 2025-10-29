@@ -6,7 +6,7 @@ import {
   MessageCircle,
   Share,
 } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import Form from "../../../components/Form";
 import { createPostSchema } from "../schema/schema";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
@@ -14,7 +14,6 @@ import { createPostThunk } from "../../../store/postSlice/post.thunk";
 import { IKUpload } from "imagekitio-react";
 import { authenticator } from "../../../utils/Authenticator";
 import { useNavigate } from "react-router-dom";
-import { LoadingSpinner } from "../components/LoadingSpinner";
 import Loader from "../../../components/Loader";
 
 const CreatePost = () => {
