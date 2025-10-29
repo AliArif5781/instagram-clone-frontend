@@ -1,10 +1,7 @@
 // components/FollowingModal.tsx
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
-import {
-  getFollowingThunk,
-  unfollowUserThunk,
-} from "../../../store/follow/follow.thunk";
+import { getFollowingThunk } from "../../../store/follow/follow.thunk";
 
 interface FollowingModalProps {
   isOpen: boolean;
@@ -16,7 +13,7 @@ const FollowingModal = ({ isOpen, onClose, userId }: FollowingModalProps) => {
   const dispatch = useAppDispatch();
   const { following, loading } = useAppSelector((state) => state.follow);
   const currentUser = useAppSelector((state) => state.user.userProfile);
-  const isOwnProfile = currentUser?._id === userId;
+  // const isOwnProfile = currentUser?._id === userId;
 
   useEffect(() => {
     if (isOpen && userId) {
