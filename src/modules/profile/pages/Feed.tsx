@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import StoriesSection from "./StoriesSection";
-import { useAppDispatch, useAppSelector } from "../../../store/hook";
+import { useAppDispatch } from "../../../store/hook";
 import { getStoriesThunk } from "../../../store/postSlice/post.thunk";
 import PostFeed from "../../../components/PostFeed";
 
