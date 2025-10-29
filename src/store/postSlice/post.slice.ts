@@ -88,7 +88,7 @@ export const createPostSlice = createSlice({
   },
   // create post
   extraReducers: (builder) => {
-    builder.addCase(createPostThunk.pending, (state, action) => {
+    builder.addCase(createPostThunk.pending, (state) => {
       state.buttonLoading = true;
       state.error = "";
     });
@@ -104,7 +104,7 @@ export const createPostSlice = createSlice({
     });
 
     // get post
-    builder.addCase(getPostsThunk.pending, (state, action) => {
+    builder.addCase(getPostsThunk.pending, (state) => {
       state.screenLoading = true;
       state.error = "";
     });
@@ -123,7 +123,7 @@ export const createPostSlice = createSlice({
     });
 
     // get search user post
-    builder.addCase(getUserPostsThunk.pending, (state, action) => {
+    builder.addCase(getUserPostsThunk.pending, (state) => {
       state.screenLoading = true;
       state.error = "";
     });
@@ -141,7 +141,7 @@ export const createPostSlice = createSlice({
     });
 
     // create story
-    builder.addCase(createStoryThunk.pending, (state, action) => {
+    builder.addCase(createStoryThunk.pending, (state) => {
       state.loading.createStoryLoading = true;
       state.error = "";
     });
@@ -158,7 +158,7 @@ export const createPostSlice = createSlice({
     });
 
     // get story
-    builder.addCase(getStoriesThunk.pending, (state, action) => {
+    builder.addCase(getStoriesThunk.pending, (state) => {
       state.loading.getStoriesLoadoing = true;
       state.error = "";
     });
@@ -174,7 +174,7 @@ export const createPostSlice = createSlice({
     });
 
     // getAllFollowerPost
-    builder.addCase(getAllFollowerPostThunk.pending, (state, action) => {
+    builder.addCase(getAllFollowerPostThunk.pending, (state) => {
       state.loading.getAllFollowerPostLoading = true;
       state.error = "";
     });
@@ -184,7 +184,7 @@ export const createPostSlice = createSlice({
       state.isAuthenticated = true;
       state.error = "";
     });
-    builder.addCase(getAllFollowerPostThunk.rejected, (state, action) => {
+    builder.addCase(getAllFollowerPostThunk.rejected, (state) => {
       state.loading.getAllFollowerPostLoading = false;
       state.error = "";
     });
