@@ -73,7 +73,7 @@ export const userSlice = createSlice({
 
   extraReducers: (builder) => {
     // Login
-    builder.addCase(loginUserThunk.pending, (state, action) => {
+    builder.addCase(loginUserThunk.pending, (state) => {
       state.buttonLoading = true;
       state.error = "";
     });
@@ -90,7 +90,7 @@ export const userSlice = createSlice({
     });
 
     // Signup
-    builder.addCase(signupUserThunk.pending, (state, action) => {
+    builder.addCase(signupUserThunk.pending, (state) => {
       state.buttonLoading = true;
       state.error = "";
     });
@@ -107,11 +107,11 @@ export const userSlice = createSlice({
     });
 
     // Logout
-    builder.addCase(logoutUserThunk.pending, (state, action) => {
+    builder.addCase(logoutUserThunk.pending, (state) => {
       state.buttonLoading = true;
       state.error = "";
     });
-    builder.addCase(logoutUserThunk.fulfilled, (state, action) => {
+    builder.addCase(logoutUserThunk.fulfilled, (state) => {
       state.userProfile = null;
       state.currentUser = null; // Clear current user
       state.selectedUser = null;
@@ -128,7 +128,7 @@ export const userSlice = createSlice({
     });
 
     // Get User Profile
-    builder.addCase(getUserProfileThunk.pending, (state, action) => {
+    builder.addCase(getUserProfileThunk.pending, (state) => {
       state.screenLoading = true;
       state.error = "";
       // You can add loading state if needed
@@ -146,14 +146,14 @@ export const userSlice = createSlice({
     });
 
     // Get Other Users
-    builder.addCase(getOtherUsersThunk.pending, (state, action) => {
+    builder.addCase(getOtherUsersThunk.pending, (state) => {
       state.screenLoading = true;
     });
     builder.addCase(getOtherUsersThunk.fulfilled, (state, action) => {
       state.screenLoading = false;
       state.otherUser = action.payload?.responseData;
     });
-    builder.addCase(getOtherUsersThunk.rejected, (state, action) => {
+    builder.addCase(getOtherUsersThunk.rejected, (state) => {
       state.screenLoading = false;
     });
 
