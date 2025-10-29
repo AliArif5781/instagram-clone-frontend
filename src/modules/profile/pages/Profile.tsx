@@ -4,7 +4,6 @@ import { lazy, Suspense, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAppDispatch } from "../../../store/hook";
 import { getPostsThunk } from "../../../store/postSlice/post.thunk";
-import { LoadingSpinner } from "../components/LoadingSpinner";
 import Loader from "../../../components/Loader";
 
 // Lazy load children routes (PostsTab and SavedTab)
