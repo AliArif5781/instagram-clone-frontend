@@ -1,5 +1,4 @@
 // components/SavedTab.tsx
-import React from "react";
 import { Save, Image } from "lucide-react";
 
 const SavedPage = () => {
