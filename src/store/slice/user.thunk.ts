@@ -6,7 +6,6 @@ import type {
 } from "../../types/type";
 import { api } from "../../api/axios";
 import toast from "react-hot-toast";
-import { UserProfileSchema } from "../../modules/profile/schema/schema";
 
 export const loginUserThunk = createAsyncThunk(
   "user/login",
