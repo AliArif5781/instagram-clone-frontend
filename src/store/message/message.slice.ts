@@ -27,7 +27,7 @@ export const messageSlice = createSlice({
   extraReducers: (builder) => {
     // send Messages
     // send message
-    builder.addCase(sendMessageThunk.pending, (state, action) => {
+    builder.addCase(sendMessageThunk.pending, (state) => {
       state.buttonLoading = true;
     });
     builder.addCase(sendMessageThunk.fulfilled, (state, action) => {
@@ -37,12 +37,12 @@ export const messageSlice = createSlice({
       state.messages = [...oldMessages, action.payload?.responseData];
       state.buttonLoading = false;
     });
-    builder.addCase(sendMessageThunk.rejected, (state, action) => {
+    builder.addCase(sendMessageThunk.rejected, (state) => {
       state.buttonLoading = false;
     });
 
     // get Messages
-    builder.addCase(getMessageThunk.pending, (state, action) => {
+    builder.addCase(getMessageThunk.pending, (state) => {
       state.buttonLoading = true;
       state.screenLoading = true;
     });
@@ -52,7 +52,7 @@ export const messageSlice = createSlice({
       state.screenLoading = false;
       state.buttonLoading = false;
     });
-    builder.addCase(getMessageThunk.rejected, (state, action) => {
+    builder.addCase(getMessageThunk.rejected, (state) => {
       state.buttonLoading = false;
       state.screenLoading = false;
     });
