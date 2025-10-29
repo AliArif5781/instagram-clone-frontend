@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { updateUserProfileThunk } from "../../../store/slice/user.thunk";
-import Form, { type FormSchema } from "../../../components/Form";
+import Form from "../../../components/Form";
 import Loader from "../../../components/Loader";
 import { formSchema } from "../schema/schema";
 
