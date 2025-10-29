@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import SuggestedSkeleton from "../components/SuggestedSkeleton";
 import { suggestedForYouThunk } from "../../../store/follow/follow.thunk";
