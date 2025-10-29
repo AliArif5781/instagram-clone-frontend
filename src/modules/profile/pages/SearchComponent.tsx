@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { clearSearchResults } from "../../../store/slice/user.slice";
 import { useNavigate } from "react-router-dom";
-import type { otherUsers } from "../../../types/type";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { searchUsersThunk } from "../../../store/slice/user.thunk";
 import { Loader2, Search, X } from "lucide-react";
